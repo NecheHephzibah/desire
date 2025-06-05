@@ -3,6 +3,7 @@ import "./globals.css";
 // import header component
 import Header from "@/components/Header";
 import CursorProvider from "@/components/CursorContent";
+import Transition from "@/components/Transition";
 
 const marcellus = Marcellus({
   variable: "--font-marcellus",
@@ -28,9 +29,9 @@ export default function RootLayout({ children }) {
         className={"${marcellus.variable} ${Montserrat.variable} overflow-x-hidden"}
       >
         <CursorProvider>
+          <Transition/>
           <Header />
         </CursorProvider>
-        
         {children}
       </body>
     </html>
